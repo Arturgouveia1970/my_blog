@@ -5,13 +5,13 @@ RSpec.describe User, type: :model do
     User.new(name: "Anything", photo: 'http://twitter.com', bio: 'test for User')
   }
 
-  describe "Tests for validations" do
+  describe "Tests for User model validations" do
     it "is not valid" do
       expect(subject).to_not be_valid
     end
 
     it "is not valid without a title" do
-      subject.posts_counter = 0
+      subject.posts_counter = 1
       expect(subject).to be_valid
     end
 
