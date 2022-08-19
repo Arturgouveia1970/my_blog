@@ -1,16 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  before(:all) do
-    user = User.new(name: 'Tester', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Tester from Mexico.', posts_counter: 0)
-    #user.save
-  end
-  #subject {
+  
   user = User.new(name: 'Tester', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Tester from Mexico.', posts_counter: 0)
   post = Post.new(title:"Rspec test", text: 'rspec test for post model', comments_counter: 1, likes_counter: 0, user_id: 1)
-  #}
-
-  #before { subject.save }
 
   describe "Tests for Post model validations" do
     it "comments_counter & likes_counter test" do
