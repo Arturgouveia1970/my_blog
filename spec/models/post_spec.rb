@@ -21,7 +21,7 @@ RSpec.describe Post, type: :model do
       expect(post).to_not be_valid
     end
 
-    it 'Increases the comments' do
+    it 'Increases the posts_counter' do
       counter = User.find(user.id).posts_counter
       post.update_posts
       expect(User.find(user.id).posts_counter).to eq(counter + 1)

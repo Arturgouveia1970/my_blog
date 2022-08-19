@@ -10,5 +10,11 @@ RSpec.describe Comment, type: :model do
     it "comment should be valid" do
       expect(comment).to be_valid
     end
+
+    it 'Increases the comments_counter' do
+      counter = Post.find(post.id).comments_counter
+      comment.update_comments
+      expect(Post.find(post.id).comments_counter).to eq(counter + 1)
+    end
   end
 end
