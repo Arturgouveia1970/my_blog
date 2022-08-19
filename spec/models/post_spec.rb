@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   
-  user = User.new(name: 'Tester', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Tester from Mexico.', posts_counter: 0)
-  post = Post.new(title:"Rspec test", text: 'rspec test for post model', comments_counter: 1, likes_counter: 0, user_id: 1)
+  user = User.create(name: 'Tester', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Tester from Mexico.', posts_counter: 0)
+  post = Post.new(title:"Rspec test", text: 'rspec test for post model', comments_counter: 1, likes_counter: 0, user_id: user.id)
 
   describe "Tests for Post model validations" do
     it "comments_counter & likes_counter test" do
@@ -22,9 +22,9 @@ RSpec.describe Post, type: :model do
     end
 
     it 'Increases the comments' do
-      counter = User.find(1).posts_counter
+      counter = User.find(user.id).posts_counter
       post.update_posts
-      expect(User.find(1).posts_counter).to eq(counter + 1)
+      expect(User.find(user.id).posts_counter).to eq(counter + 1)
     end
   end
 end
