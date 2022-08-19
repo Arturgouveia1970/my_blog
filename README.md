@@ -1,4 +1,4 @@
-# Blog app - creating a data model
+# Blog app
 
 ## Description: use migration files to build your schema
 
