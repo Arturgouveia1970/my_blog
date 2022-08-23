@@ -14,7 +14,7 @@ RSpec.describe 'Users', type: :request do
 
     it 'Check if the response body includes correct placeholder text' do
       get '/users/index'
-      expect(response.body).to include("Here is a list of users")
+      expect(response.body).to include('Here is a list of users')
     end
   end
 
@@ -31,7 +31,7 @@ RSpec.describe 'Users', type: :request do
 
     it 'Check if the response body includes correct placeholder text' do
       get '/users/show'
-      expect(response.body).to include("Here is informations for the given user")
+      expect(response.body).to include('Here is informations for the given user')
     end
   end
 end

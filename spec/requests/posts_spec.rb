@@ -14,7 +14,7 @@ RSpec.describe 'Posts', type: :request do
 
     it 'Check if the response body includes correct placeholder text' do
       get '/posts/index'
-      expect(response.body).to include("Here is a list of posts for a given user")
+      expect(response.body).to include('Here is a list of posts for a given user')
     end
   end
 
@@ -31,7 +31,7 @@ RSpec.describe 'Posts', type: :request do
 
     it 'Check if the response body includes correct placeholder text' do
       get '/posts/show'
-      expect(response.body).to include("Here is single a post of the given user")
+      expect(response.body).to include('Here is single a post of the given user')
     end
   end
 end
