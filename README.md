@@ -23,6 +23,26 @@
 - linters for Ruby on Rails
 - PostgreSQL DataBase
 
+### Steps to run the project
+
+#### 1 - Install the required libraries.
+
+```
+bundle install
+```
+
+#### 2 - Run the project
+
+```
+rails server
+```
+
+### Run tests
+
+```
+rspec spec
+```
+
 ## Author
 
 👤 **Ibrahim Ahmat**
