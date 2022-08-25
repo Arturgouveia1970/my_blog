@@ -1,4 +1,4 @@
-<% if post.recent_comments.length > 0 %>
+<% if post.comments.count > 0 %>
   <% post.recent_comments.each do |comment| %>
     <p class='comment'><%= comment.user.name %> : <%= comment.text%></p>
   <% end %>

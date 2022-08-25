@@ -1,14 +1,20 @@
 <div class='post-details'>
-  <div class='post-header'>
-    <p class='title'><%= @post.title %> by <%= @post.user.name%></p>
-    <p class='post-statics'>Comments: <span><%= @post.comments_counter %></span>, Likes: <span><%= @post.likes_counter %></span></p>
+  <div class='post user-post'>
+    <div class='post-header'>
+      <p class='title'><%= @post.title %> by <%= @post.user.name%></p>
+      <p class='post-statics'>Comments: <span><%= @post.comments.count %></span>, Likes: <span><%= @post.likes.count %></span></p>
+    </div>
+    <div class='post-content'>
+      <%= @post.text %>
+    </div>
   </div>
-  <div class='post-content'>
-    <%= @post.text %>
-  </div>
-  <div class='comments'>
-    <% @post.comments.each do |comment| %>
-      <p><%= comment.user.name %>: <%= comment.text %> </p>
+  <div class='comments_container user-post'>
+    <% if @post.comments.length > 0 %>
+      <% @post.comments.each do |comment| %>
+        <p class='comment'><%= comment.user.name %> : <%= comment.text %></p>
+      <% end %>
+    <% else %>
+      <p class='comment'>There are no comments <em>yet!!</em></p>
     <% end %>
   </div>
 </div>
