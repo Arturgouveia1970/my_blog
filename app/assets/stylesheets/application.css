@@ -13,3 +13,133 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  width: 85%;
+  height: auto;
+  margin: 0.8rem 2.5rem;
+  padding: 1rem;
+}
+
+.image-container {
+  width: 15%;
+  height: auto;
+  border: 2px solid black;
+  margin: 1.2rem 4%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.user-content {
+  width: 80%;
+  height: auto;
+  border: 2px solid black;
+  margin: 1.8rem 1rem 1.8rem 0;
+  padding: 1.5rem;
+}
+
+.user-content h2 {
+  font-size: 2.5rem;
+}
+
+.user-content p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: end;
+  vertical-align: text-bottom;
+  margin: 3rem 0 0 0;
+}
+
+.user-bio {
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 85%;
+  min-height: 5rem;
+  border: 2px solid black;
+  margin: 1.8rem 2.5rem;
+  padding: 1.5rem;
+}
+
+.user-bio p {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+.user-post {
+  font-weight: 600;
+  width: 85%;
+  min-height: 5rem;
+  border: 2px solid black;
+  margin: 1.8rem 2.5rem;
+  padding: 1.5rem;
+}
+
+.post-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.post-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.statics {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: end;
+  vertical-align: text-bottom;
+}
+
+.btn-container {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  border: 2px solid black;
+  box-shadow: 2px 5px 2px;
+  padding: 0.2rem 0.5rem;
+  margin: 0 auto 3rem auto;
+}
+
+.posts-btn {
+  height: 80%;
+  width: 100%;
+  padding: 0.4rem;
+  margin: 0 auto;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.btn-container:hover {
+  background-color: #413c3c;
+}
+
+.posts-btn:hover {
+  color: #fff;
+}
+
+.post-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0.8rem auto;
+}

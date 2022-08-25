@@ -1,2 +1,5 @@
-<h1>Here is a list of users</h1>
-
+<section class='users-list'>
+  <% @users.each do |user| %>
+    <%= render partial: 'shared/user/user', locals: {user: user} %>
+  <% end %>
+</section>

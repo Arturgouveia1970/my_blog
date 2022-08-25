@@ -1,1 +1,12 @@
-<h1>Here is a list of posts for a given user</h1>
+<section class='post-container'>
+  <%= render partial: 'shared/user/user', locals: {user: @user} %>
+  <% @posts.each do |post| %>
+    <%= render partial: 'shared/post/post', locals: {post: post} %>
+    <div class='comments_container user-post'>
+      <%= render partial: 'shared/comment/comment_last', locals: {post: post} %>
+    </div>
+  <% end %>
+  <div class='btn-container'>
+    <a class= "posts-btn" href='' >Pagination</a>
+  </div>
+</section>

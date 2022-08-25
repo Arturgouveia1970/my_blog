@@ -1,0 +1,11 @@
+<div class='user-post'>
+  <h4 class='post-title'><%= post.title%> </h4>
+  <p class='post-text'>
+    <% if post.text.length > 110 %>
+      <%= truncate(post.text, length: 110) ... %>
+    <% else %>
+      <%= post.text %>.
+    <% end %>
+  </p>
+  <p class='statics'>Comments: <span><%= post.comments.count %></span>, Likes: <span><%= post.likes.count %></span></p>
+</div>
