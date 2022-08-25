@@ -1,1 +1,19 @@
-<h1>Here is informations for the given user</h1>
+<section class='info'>
+  <%= render partial: 'shared/user/user', locals: {user: @user} %>
+  <div class='user-bio'>
+    <p>Bio:</p>
+    <%= @user.bio %>
+  </div>   
+  <div>
+    <% if @user.posts_counter <= 0 %>
+      <p class='user-post'><%= @user.name %> doesn't have a post <em>yet!!</em></p>
+    <% else %>
+      <% @user.recent_posts.each do |post| %>
+        <%= render partial: 'shared/post/post_sum', locals: {post: post} %>
+      <% end %>
+      <div class='btn-container'>
+        <%= link_to("See all posts", user_posts_path(@user), class: "posts-btn") %>
+      </div>
+    <% end %>
+  </div>
+</section>
