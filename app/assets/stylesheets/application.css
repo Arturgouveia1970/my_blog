@@ -116,7 +116,6 @@
 
 .posts-btn {
   height: 80%;
-  width: 100%;
   padding: 0.4rem;
   margin: 0 auto;
   text-decoration: none;
@@ -142,4 +141,62 @@
   font-size: 1.4rem;
   font-weight: 700;
   margin: 0.8rem auto;
+}
+
+.form-container {
+  width: 50%;
+  height: auto;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin: 5rem auto;
+}
+
+.form-container h1 {
+  font-size: 2.5rem;
+  margin: 0 0 1rem 0;
+}
+
+.post-tilte, .post-text {
+  width: 80%;
+  margin: 0.5rem auto;
+}
+
+.post-tilte .title-input,
+.post-text .text-input  {
+  width: 100%;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 0.2rem;
+  padding: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.post-text .text-input {
+  height: 8rem;
+}
+
+.submit-btn {
+  padding: 0.4rem;
+  margin: 0 auto;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 2px solid black;
+  box-shadow: 2px 5px 2px;
+}
+
+.submit-btn:hover {
+  background-color: #413c3c;
+  color: #fff;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
