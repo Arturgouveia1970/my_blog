@@ -142,13 +142,14 @@
   margin: 0 0 1rem 0;
 }
 
-.post-tilte, .post-text {
+.post-tilte,
+.post-text {
   width: 80%;
   margin: 0.5rem auto;
 }
 
 .post-tilte .title-input,
-.post-text .text-input  {
+.post-text .text-input {
   width: 100%;
   height: auto;
   border: 2px solid black;
@@ -193,10 +194,12 @@
   margin: 1.8rem 2.5rem;
   padding: 1rem 1.5rem;
 }
+
 .new-comment-container h3 {
   margin: 0 auto;
   font-size: 1.5rem;
 }
+
 .new-comment .comment-input {
   width: 80%;
   border: 2px solid black;
