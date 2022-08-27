@@ -243,9 +243,12 @@
   border: 2px solid black;
   border-radius: 8px;
   box-shadow: 5px 5px 5px;
+  color: black;
+  text-decoration: none;
 }
 
 .like-btn:hover {
   background-color: #413c3c;
   color: #fff;
 }
+
