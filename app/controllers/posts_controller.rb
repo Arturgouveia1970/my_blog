@@ -18,10 +18,10 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html do
         if @post.save
-          flash[:success] = "Post saved successfully"
+          flash[:success] = 'Post saved successfully'
           redirect_to user_post_path(current_user, @post)
         else
-          flash.now[:error] = "Error: Post could not be saved"
+          flash.now[:error] = 'Error: Post could not be saved'
           render :new
         end
       end
