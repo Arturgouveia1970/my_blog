@@ -1,11 +1,14 @@
 <div class='post-details'>
-  <div class='post user-post'>
+  <div class='user-post'>
     <div class='post-header'>
       <p class='title'><%= @post.title %> by <%= @post.user.name%></p>
       <p class='post-statics'>Comments: <span><%= @post.comments.count %></span>, Likes: <span><%= @post.likes.count %></span></p>
     </div>
     <div class='post-content'>
       <%= @post.text %>
+      <%= form_with model: Like, url: post_likes_path(@post.user, @post), method: :post do |form| %>
+        <% form.submit "Like", class:"like-btn" %>
+      <% end %>
     </div>
   </div>
   <div class='comments_container user-post'>
@@ -16,5 +19,9 @@
     <% else %>
       <p class='comment'>There are no comments <em>yet!!</em></p>
     <% end %>
+  </div>
+  <div class='new-comment-container'>
+    <h3>Add a comment</h3>
+    <%= render partial: 'shared/comment/new'%>
   </div>
 </div>
