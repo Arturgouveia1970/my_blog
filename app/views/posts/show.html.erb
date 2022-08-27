@@ -6,7 +6,9 @@
     </div>
     <div class='post-content'>
       <%= @post.text %>
-      <%# Add the render of new comments here %>
+      <%= form_with model: Like, url: post_likes_path(@post.user, @post), method: :post do |form| %>
+        <% form.submit "Like", class:"like-btn" %>
+      <% end %>
     </div>
   </div>
   <div class='comments_container user-post'>
