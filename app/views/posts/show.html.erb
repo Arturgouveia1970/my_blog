@@ -6,6 +6,7 @@
     </div>
     <div class='post-content'>
       <%= @post.text %>
+      <%# Add the render of new comments here %>
     </div>
   </div>
   <div class='comments_container user-post'>
@@ -16,5 +17,9 @@
     <% else %>
       <p class='comment'>There are no comments <em>yet!!</em></p>
     <% end %>
+  </div>
+  <div class='new-comment-container'>
+    <h3>Add a comment</h3>
+    <%= render partial: 'shared/comment/new'%>
   </div>
 </div>
