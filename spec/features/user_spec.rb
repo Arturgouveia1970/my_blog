@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "User pages test index/show ", type: :feature do
+RSpec.describe 'User pages test index/show ', type: :feature do
   before(:all) do
     @first_user = User.create(name: 'Integration test', photo: 'http://twitter.com', bio: 'test for User')
     @post1 = Post.create(title: 'Rspec test 1', text: 'rspec test for post', user: @first_user)
@@ -22,9 +22,9 @@ RSpec.describe "User pages test index/show ", type: :feature do
 
     scenario 'Should show the Number of posts' do
       visit users_path
-      expect(page).to have_text("Number of posts: 4")
+      expect(page).to have_text('Number of posts: 4')
     end
-    
+
     scenario 'should redirect to user\'s page' do
       @second_user = User.create(name: 'Messi', photo: 'http://google.com', bio: 'test for redirecting')
       visit users_path
@@ -46,7 +46,7 @@ RSpec.describe "User pages test index/show ", type: :feature do
 
     scenario 'Should show the Number of posts' do
       visit user_path(@first_user)
-      expect(page).to have_text("Number of posts: 4")
+      expect(page).to have_text('Number of posts: 4')
     end
 
     scenario 'Should show the bio' do
@@ -56,7 +56,6 @@ RSpec.describe "User pages test index/show ", type: :feature do
 
     scenario 'Should show user recent 3 posts' do
       visit user_path(@first_user)
-      recent_posts = @first_user.recent_posts
       expect(page).to have_content('Rspec test 2')
       expect(page).to have_content('Rspec test 3')
       expect(page).to have_content('Rspec test 4')
