@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+# rubocop:disable Metrics/BlockLength
 RSpec.feature 'Posts', type: :feature do
   before do
     @user1 = User.create(name: 'Patrick Mboma', photo: 'http://twitter.com', bio: 'test for User')
@@ -63,3 +63,4 @@ RSpec.feature 'Posts', type: :feature do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength

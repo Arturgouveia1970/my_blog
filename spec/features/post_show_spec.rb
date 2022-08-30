@@ -40,7 +40,7 @@ RSpec.feature 'Posts', type: :feature do
       visit user_post_path(@user1, @post1)
       expect(page).to have_content(@comment1.user.name)
     end
-    
+
     it 'Should show the comment each comment user left ' do
       visit user_post_path(@user2, @post1)
       expect(page).to have_text(@comment1.text)
@@ -48,3 +48,4 @@ RSpec.feature 'Posts', type: :feature do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
