@@ -1,5 +1,5 @@
 <div class='user-post'>
-  <h4 class='post-title'><%= post.title%> </h4>
+  <h4 class='post-title'><%= link_to(post.title, user_post_path(@user, post), class: "user-name") %></h4>
   <p class='post-text'>
     <%= post.text %>.
   </p>
