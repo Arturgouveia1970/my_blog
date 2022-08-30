@@ -4,6 +4,11 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
+.user-name {
+  text-decoration: none;
+  color: #000;
+}
+
 .user-info {
   display: flex;
   flex-direction: row;

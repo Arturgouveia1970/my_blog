@@ -43,7 +43,13 @@ rails server
 rspec spec
 ```
 
-## Author
+## Authors
+
+👤 **Saraza Toussaint**
+
+- GitHub: [@sarazaToussaint](https://github.com/sarazaToussaint)
+- Twitter: [@ToussaintSaraz1](https://twitter.com/ToussaintSaraz1)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/toussaintsaraza/)
 
 👤 **Ibrahim Ahmat**
 

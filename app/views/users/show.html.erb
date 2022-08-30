@@ -11,9 +11,9 @@
       <% @user.recent_posts.each do |post| %>
         <%= render partial: 'shared/post/post_sum', locals: {post: post} %>
       <% end %>
-      <div class='btn-container'>
-        <%= link_to("See all posts", user_posts_path(@user), class: "posts-btn") %>
-      </div>
     <% end %>
+    <div class='btn-container'>
+        <%= link_to("See all posts", user_posts_path(@user), class: "posts-btn") %>
+    </div>
   </div>
 </section>

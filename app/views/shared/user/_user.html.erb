@@ -3,7 +3,7 @@
     <img src= <%= user.photo %> alt= '<%= user.name + ' avatar'%>'/>
   </div>
   <div class='user-content'>
-    <h2><%= user.name %></h2>
+    <h2><%= link_to(user.name, user_path(user), class: "user-name") %> </h2>
     <p>Number of posts: <%= user.posts_counter%></p>
     <%= link_to "Create New Post", new_user_post_path(user_id: user.id) , class: "like-btn" %>
   </div>
