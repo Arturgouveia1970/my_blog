@@ -6,8 +6,8 @@ RSpec.feature 'Posts', type: :feature do
     @user2 = User.create(name: 'Paul Biya', photo: 'http://twitter.com', bio: 'test for User')
     @post1 = Post.create(title: 'Rspec test 1', text: 'rspec test for post', user: @user1)
     @comment1 = Comment.create(user: @user1, post: @post1, text: 'test for User')
-    @comment2 = Comment.create(user: @user2, post: @post1, text: 'test for User')
-    @like = Like.create(user: @user1, post: @post1)
+    @comment2 = Comment.create(user: @user2, post: @post1, text: 'test for User2')
+    Like.create(user: @user1, post: @post1)
   end
 
   describe 'User post index page' do
@@ -91,16 +91,15 @@ RSpec.feature 'Posts', type: :feature do
 
     scenario 'Should show the post commentor name ' do
       visit user_post_path(@user1, @post1)
-      comment = @post1.comments.first
-      expect(page).to have_content(comment.author.name)
+      expect(page).to have_content(@comment1.user.name)
     end
 
-    scenario 'Should show the comment each comment author left ' do
-      visit user_post_path(@user1, @post1)
-      comment = @post1.comments.first
-      comment2 = @post1.comments.last
-      expect(page).to have_content(comment.text)
-      expect(page).to have_content(comment2.text)
+    scenario 'Should show the comment each comment user left ' do
+      @user = User.first
+      @post = Post.first
+      visit user_post_path(@user, @post)
+      expect(page).to have_text(@post.comments[0].text)
+      expect(page).to have_text(@post.comments[1].text)
     end
   end
 end
