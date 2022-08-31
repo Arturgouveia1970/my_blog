@@ -256,3 +256,53 @@
   background-color: #413c3c;
   color: #fff;
 }
+
+.login-container {
+  width: 100%;
+  margin: 7rem auto;
+}
+
+.login {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.login h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.email,
+.password,
+.login-btn {
+  width: 100%;
+  height: auto;
+  font-size: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0.5rem 0;
+  padding: 0.2rem;
+  border: 2px solid black;
+}
+
+.email::placeholder,
+.password::placeholder {
+  color: #000;
+}
+
+.login-btn {
+  background: #fff;
+  font-weight: 600;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+}
+
+.links a {
+  color: #0a57ff;
+  text-decoration: none;
+  padding: 0 0.2rem;
+  border-right: 1.5px #000 solid;
+}
