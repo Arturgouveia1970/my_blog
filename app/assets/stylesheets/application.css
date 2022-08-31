@@ -276,7 +276,7 @@
 .email,
 .password,
 .login-btn {
-  width: 100%;
+  width: 98.5%;
   height: auto;
   font-size: 1.5rem;
   font-family: 'Courier New', Courier, monospace;
@@ -291,8 +291,14 @@
 }
 
 .login-btn {
+  width: 100%;
   background: #fff;
   font-weight: 600;
+}
+
+.login-btn:hover {
+  background-color: #413c3c;
+  color: #fff;
 }
 
 .links {
