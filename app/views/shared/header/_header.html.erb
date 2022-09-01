@@ -1,0 +1,12 @@
+<nav class='navbar'>
+  <%= link_to("Home", root_path, class: "link") %>
+  <ul>
+    <% if !user_signed_in? %>
+      <li><%= link_to("Login", new_user_session_path, class: 'link') %></li>
+      <li><%= link_to("SignUp", new_user_session_path, class: 'link') %></li>
+    <% else %>
+      <li><%= link_to('Posts', user_path(current_user), class: 'link')%></li>
+      <li><%= link_to('Log Out', destroy_user_session_path, class: 'link')%></li>
+    <% end %>
+  </ul>
+</nav>
