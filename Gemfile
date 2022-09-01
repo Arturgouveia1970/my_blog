@@ -11,6 +11,9 @@ gem 'rails', '~> 7.0.3', '>= 7.0.3.1'
 
 gem 'rspec-rails'
 
+# Add cancancan to the project
+gem 'cancancan'
+
 gem 'childprocess'
 gem 'ffi'
 # Use devise in the app
