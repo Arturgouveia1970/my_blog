@@ -13,6 +13,8 @@ gem 'rspec-rails'
 
 gem 'childprocess'
 gem 'ffi'
+# Use devise in the app
+gem 'devise'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
