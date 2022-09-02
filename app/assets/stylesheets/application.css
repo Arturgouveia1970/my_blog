@@ -312,3 +312,9 @@
   padding: 0 0.2rem;
   border-right: 1.5px #000 solid;
 }
+
+.delete-btn {
+  color: #fff;
+  background-color: #b01d46;
+  border: 2px solid #000;
+}
