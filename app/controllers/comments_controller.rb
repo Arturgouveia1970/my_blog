@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
+
   def create
     @post = Post.includes(:user).find(params[:post_id])
     @comment = Comment.create(comment_params)
@@ -14,6 +16,9 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment = Comment.find(params[:id])
+    @post = Post.find(@comment.post_id)
+    @post.comments_counter -= 1
+    @post.save
     @comment.destroy!
     flash[:success] = 'You have deleted your comment!!.'
     redirect_to user_post_path(current_user, params[:post_id])
