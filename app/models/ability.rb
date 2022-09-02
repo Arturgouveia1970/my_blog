@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
@@ -12,7 +10,7 @@ class Ability
     else
       can :create, Comment
       can :manage, Comment, user: user
-      can :manage, Post, user: user
+      can :manage, Post, user:
     end
 
     #
