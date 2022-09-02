@@ -7,6 +7,6 @@
     </div>
   <% end %>
   <div class='btn-container'>
-    <a class= "posts-btn" href='' >Pagination</a>
+    <%= link_to "Pagination", new_user_post_path(user_id: @user.id) , class: "posts-btn" %>
   </div>
 </section>
