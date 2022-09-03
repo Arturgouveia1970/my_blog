@@ -18,6 +18,8 @@ gem 'childprocess'
 gem 'ffi'
 # Use devise in the app
 gem 'devise'
+gem 'devise-jwt'
+gem 'rack-cors'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
