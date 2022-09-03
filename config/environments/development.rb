@@ -5,6 +5,10 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   
+  #LetterOpenerWeb.configure do |config|
+  #  config.letters_location = Rails.root.join('your', 'new', 'path')
+  #end
+  
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
@@ -68,10 +72,6 @@ Rails.application.configure do
   # config.action_view.annotate_rendered_view_with_filenames = true
   config.action_mailer.delivery_method = :letter_opener
   config.action_mailer.perform_deliveries = true
-
-  #LetterOpenerWeb.configure do |config|
-  #  config.letters_location = Rails.root.join('your', 'new', 'path')
-  #end
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
